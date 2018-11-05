@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+<div class="page-header">
+  <%= link_to articles_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <h1>New article</h1>
+</div>
+
+<%= render 'form' %>
+<% else %>
+<br>
+<br>
+<br>
+<br>
+<h2>Welcome , to see content of this website you must be <%= link_to 'registered', new_user_registration_path %></h2>
+<%= link_to 'Create account', new_user_registration_path %>
+
+<% end %>

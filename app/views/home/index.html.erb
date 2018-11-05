@@ -1,0 +1,21 @@
+
+<% if user_signed_in? %>
+<br>
+<br>
+<br>
+<br>
+<div class="page-header">
+  <h1>Welcome <%= current_user.fist_name %> </h1>
+</div>
+<p>You're succesfully registered</p>
+
+
+<% else %>
+<br>
+<br>
+<br>
+<br>
+<h2>Welcome , to see content of this website you must be <%= link_to 'registered', new_user_registration_path %></h2>
+<%= link_to 'Create account', new_user_registration_path %>
+
+<% end %>
